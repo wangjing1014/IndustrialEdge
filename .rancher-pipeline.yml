@@ -3,7 +3,7 @@ stages:
   steps:
   - runScriptConfig:
       image: java:8
-      shellScript: mvn clean package
+      shellScript: mvnw clean package
   when:
     event:
       include:
