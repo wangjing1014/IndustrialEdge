@@ -2,7 +2,7 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: maven:v1
+      image: maven:3.6.0-jdk-8-alpine
       shellScript: mvn clean package
   when:
     event:
@@ -27,4 +27,5 @@ notification:
     notifier: c-9w7dg:n-h6p9x
   condition:
   - Success
+  - Changed
   - Failed
