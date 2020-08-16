@@ -30,5 +30,5 @@ spec:
     app: edge
   ports:
   - protocol: TCP
-    port: 8087
+    port: 30972
     targetPort: 8087
