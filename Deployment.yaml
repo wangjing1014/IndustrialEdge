@@ -15,9 +15,9 @@ spec:
     spec:
       containers:
       - name: edge
-        image: wangjing0801/industrial-edge:1.0
+        image: wangjing0801/industrial-edge:1.1
         ports:
-        - containerPort: 8080
+        - containerPort: 8087
  
 ---
 apiVersion: v1
@@ -30,5 +30,5 @@ spec:
     app: edge
   ports:
   - protocol: TCP
-    port: 8080
-    targetPort: 8080
+    port: 8087
+    targetPort: 8087
