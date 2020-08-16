@@ -24,7 +24,7 @@ timeout: 60
 notification:
   recipients:
   - recipient: wangjing@siemens.com
-    notifier: c-9w7dg:n-h6p9x
+    notifier: c-9w7dg:n-s97lx
   condition:
   - Success
   - Changed
