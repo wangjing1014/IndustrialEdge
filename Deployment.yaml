@@ -4,6 +4,8 @@ metadata:
   name: edge-deployment
 spec:
   replicas: 1
+  selector:
+    app: edge
   template:
     metadata:
       labels:
