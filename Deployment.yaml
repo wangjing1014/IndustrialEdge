@@ -5,7 +5,8 @@ metadata:
 spec:
   replicas: 1
   selector:
-    app: edge
+    matchLabels:
+      app: edge
   template:
     metadata:
       labels:
