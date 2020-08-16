@@ -15,7 +15,7 @@ stages:
       buildContext: .
       tag: wangjing0801/industrial-edge:1.0
       pushRemote: true
-      registry: 127.0.0.1:34642
+      registry: index.docker.io
 - name: deploy
   steps:
   - applyYamlConfig:
