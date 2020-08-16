@@ -2,8 +2,8 @@ stages:
 - name: compile
   steps:
   - runScriptConfig:
-      image: java:8
-      shellScript: mvnw clean package
+      image: maven:v1
+      shellScript: mvn clean package
   when:
     event:
       include:
