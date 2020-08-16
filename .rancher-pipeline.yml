@@ -1,0 +1,30 @@
+stages:
+- name: compile
+  steps:
+  - runScriptConfig:
+      image: java:8
+      shellScript: mvn clean package
+  when:
+    event:
+      include:
+      - push
+- name: publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: wangjing0801/industrial-edge:1.0
+      pushRemote: true
+      registry: index.docker.io
+- name: deploy
+  steps:
+  - applyYamlConfig:
+      path: ./deployment.yaml
+timeout: 60
+notification:
+  recipients:
+  - recipient: wangjing@siemens.com
+    notifier: c-9w7dg:n-h6p9x
+  condition:
+  - Success
+  - Failed
