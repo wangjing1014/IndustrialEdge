@@ -17,7 +17,7 @@ spec:
       - name: edge
         image: wangjing0801/industrial-edge:1.2.9
         ports:
-        - containerPort: 30972
+        - containerPort: 8080
  
 ---
 apiVersion: v1
@@ -30,5 +30,6 @@ spec:
     app: edge
   ports:
   - protocol: TCP
-    port: 30972
-    targetPort: 30972
+    port: 8080
+    targetPort: 8080
+    nodePort: 30001

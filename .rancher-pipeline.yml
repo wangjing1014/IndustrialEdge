@@ -13,7 +13,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: wangjing0801/industrial-edge:1.2.9
+      tag: wangjing0801/industrial-edge:1.3.1
       pushRemote: true
       registry: index.docker.io
 - name: deploy
