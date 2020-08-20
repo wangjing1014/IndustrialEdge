@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: edge
-        image: wangjing0801/industrial-edge:1.3.5
+        image: wangjing0801/industrial-edge:1.3.6
         ports:
         - containerPort: 8080
  
